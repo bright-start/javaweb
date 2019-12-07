@@ -1,0 +1,55 @@
+1	package 中国大学课堂测验;
+2	
+3	import java.io.*;
+4	
+5	public class CopyFileAddLineNumber {
+6	
+7		public static void main(String[] args) {
+8			
+9			String infname="E:\\eclipse\\中国大学课堂测验\\src\\中国大学课堂测验\\CopyFileAddLineNumber.java";
+10			String outfname="E:\\eclipse\\中国大学课堂测验\\src\\中国大学课堂测验\\CopyFileAddLineNumber.txt";
+11			if(args.length>=1)
+12				infname=args[0];
+13			if(args.length>=2)
+14				outfname=args[1];
+15			try
+16			{
+17				File fin=new File(infname);
+18				File fout=new File(outfname);
+19			
+20				BufferedReader in=new BufferedReader(new FileReader(fin));
+21				PrintWriter out=new PrintWriter(new FileWriter(fout));
+22				int cnt =0;
+23				String s=in.readLine();
+24				while(s!=null)
+25				{
+26					cnt++;
+27					s=deleteComments(s);
+28					out.println(cnt+"\t"+s);
+29					s=in.readLine();
+30				}
+31				in.close();
+32				out.close();
+33				
+34			}
+35			catch(FileNotFoundException e1)
+36			{
+37				System.out.println("File not found!");
+38			}
+39			catch(IOException e2)
+40			{
+41				e2.printStackTrace();
+42			}
+43			
+44		}
+45		static String deleteComments(String s)
+46		{
+47			if(s==null)
+48				return s;
+49			int pos=s.indexOf ("
+50			if(pos<0)
+51				return s;
+52			return s.substring(0, pos);
+53		}
+54	
+55	}

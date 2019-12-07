@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="规范"/>
+	<classpathentry kind="src" path="resource"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.40.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbutils-1.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Administrator/Desktop/commons-dbutils-1.7-bin/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/druid-1.0.15.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
